@@ -4,9 +4,13 @@ import bs4
 def get_text(page):
     title = []
     data = []
-    r = requests.get(page)
+    try:
+        r = requests.get(page)
+    except:
+        return -99, 'ERROR: Page doesnt exist', ''   
+    
     if r.status_code != 200:
-        return r.status_code, title, data
+            return r.status_code, title, data
 
     soup = bs4.BeautifulSoup(r.text, "lxml")
 
@@ -14,6 +18,7 @@ def get_text(page):
 
     for pelem in soup.find_all('p'):
         data.append(pelem.get_text())
+    data = ",".join(data)
 
     return r.status_code, title, data
 
@@ -44,7 +49,7 @@ def get_link(page):
     return r.status_code, link
 
 if __name__ == '__main__':
-        page = "http://pythonforengineers.com/"    
+        page = "http://pythonforengineers.com"    
         print(get_text(page))
         print("\n\n")
         print(get_image(page))

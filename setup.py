@@ -8,4 +8,5 @@ setup(name='BeautifulRequests',
       # download_url = 'https://github.com/shantnu/shantnu_joke/archive/0.4.zip',
       author='Shantnu',
       license='GPL',
+      install_requires=['requests', 'beautifulsoup4', 'vcrpy'],
       )
