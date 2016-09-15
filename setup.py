@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(name='BeautifulRequests',
       packages = ['BeautifulRequests'],
-      version='0.4',
+      version='0.1',
       description='Combine Beautiful Soup 4 and Requests for one super library',
       url='https://github.com/shantnu/BeautifulRequests',
       download_url = 'https://github.com/shantnu/BeautifulRequests/archive/0.1.zip',
