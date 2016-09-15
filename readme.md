@@ -10,6 +10,7 @@ BeautifulRequests.get_text("https://pypi.python.org")
 
 ```
 
+This returns the: a) HTTP code b) Title  c) Text of the page.
 
 ```
 
