@@ -12,7 +12,7 @@ def get_text(page):
     if r.status_code != 200:
             return r.status_code, title, data
 
-    soup = bs4.BeautifulSoup(r.text, "lxml")
+    soup = bs4.BeautifulSoup(r.text, "html.parser")
 
     title = soup.title.text
 
@@ -29,7 +29,7 @@ def get_image(page):
     if r.status_code != 200:
         return r.status_code, images
 
-    soup = bs4.BeautifulSoup(r.text, "lxml")
+    soup = bs4.BeautifulSoup(r.text, "html.parser")
     for link in soup.find_all('img'):
 
         images.append(link.get("src"))
@@ -42,7 +42,7 @@ def get_link(page):
     if r.status_code != 200:
         return r.status_code, link
 
-    soup = bs4.BeautifulSoup(r.text, "lxml")
+    soup = bs4.BeautifulSoup(r.text, "html.parser")
     for pelem in soup.find_all('a'):
         link.append(pelem.get('href'))
 
