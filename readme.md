@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/shantnu/BeautifulRequests.svg?branch=master)
+[!Build Status](https://travis-ci.org/shantnu/BeautifulRequests.svg?branch=master)
 
 **BeautifulRequests**: Combine BeautifulSoup and Requests!
 
@@ -7,6 +7,11 @@
 import BeautifulRequests
 
 BeautifulRequests.get_text("https://pypi.python.org")
+
+```
+
+
+```
 
 Out[25]: 
 (200,
